@@ -1,0 +1,27 @@
+{
+  "name": "breakthrough",
+  "version": "1.0.0",
+  "description": "- [Overview](#overview)   - [The challenge](#the-challenge) - [My process](#my-process)   - [Built with](#built-with)   - [What I learned](#what-i-learned)   - [Continued development](#continued-development)   - [Useful resources](#useful-resources) - [Author](#author) - [Acknowledgments](#acknowledgments)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crisandryj/breakthorugh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crisandryj/breakthorugh/issues"
+  },
+  "homepage": "https://github.com/Crisandryj/breakthorugh#readme",
+  "devDependencies": {
+    "prettier": "3.0.3"
+  }
+}

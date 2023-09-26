@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Landings</h1>
+
+<div id="landings">
+  <% @landings.each do |landing| %>
+    <%= render landing %>
+    <p>
+      <%= link_to "Show this landing", landing %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New landing", new_landing_path %>

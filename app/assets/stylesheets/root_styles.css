@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
-*{
-  font-family: 'Raleway';
-  color: white;
-}
 nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  background-color: gray;
+  font-family: 'Raleway';
+  color: white;
+  background-color: hsl(218, 28%, 13%);
 }
+
 .title{
   display: flex;
   justify-content: center;
-
 }
 
 h1{
   font-size: 30px;
+  font-weight: 700;
 }
-
+.links{
+  text-decoration: none;
+}

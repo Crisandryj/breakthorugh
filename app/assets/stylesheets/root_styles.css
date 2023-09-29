@@ -20,4 +20,10 @@ h1{
 
 a{
   text-decoration: none;
+  color:white;
+}
+
+.links{
+  display: flex;
+  gap:15px;
 }

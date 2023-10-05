@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 *{
   background-color: hsl(218, 28%, 13%);
+  color: white;
 }
+
 nav{
   display: flex;
   align-items: center;
@@ -21,7 +23,7 @@ h1{
   font-weight: 700;
 }
 
-h2{
+.main-img > h2{
 color:white;
 font-size:45px;
 }
@@ -50,4 +52,17 @@ a{
   justify-content: center;
   flex-wrap: wrap;
   gap: 150px;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item > p{
+  justify-self: center;
+  align-self: center;
+  width:350px;
 }

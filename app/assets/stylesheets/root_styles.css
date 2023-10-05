@@ -43,8 +43,12 @@ a{
 }
 
 .feat-imgs{
+ 
   display:flex;
   flex-direction: columns;
   align-items:center;
+  justify-content: center;
+  flex-wrap: wrap;
+ 
 
 }

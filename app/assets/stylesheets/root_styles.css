@@ -46,6 +46,7 @@ a{
 }
 
 .feat-imgs{
+  background-image:url( './images/bg-curvy-desktop.svg' );
   display:flex;
   flex-direction: columns;
   align-items:center;

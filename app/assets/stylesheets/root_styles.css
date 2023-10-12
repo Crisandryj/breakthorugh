@@ -50,16 +50,23 @@ a{
 }
 
 
-.feat-imgs{
-  /* background-image:url( 'bg-curvy-desktop.svg' );
-  background-repeat: no-repeat; */
-  background-color: #181F2B;
+.feat-imgs, .stayproductive{
+  /* background-color: #181F2B; */
   display:flex;
   flex-direction: columns;
   align-items:center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 150px;
+}
+
+.stayproductive{
+  background-color: #181F2B;
+}
+
+.feat-imgs{
+  background-image:url( 'bg-curvy-desktop.svg' );
+  background-repeat: no-repeat;
 }
 
 .item{
@@ -76,10 +83,14 @@ a{
   width:350px;
 }
 
+stayproductive{
+  display: flex;;
+}
+
 footer{
   display: flex;
   flex-direction: row;
-  background-color:hsl(217, 28%, 9%); ;
+  background-color: #161b25;
   height: 300px;
   margin: 0px;
   padding: 0px;

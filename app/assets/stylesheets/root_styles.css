@@ -64,6 +64,12 @@ a{
   background-color: #181F2B;
 }
 
+.stayproductive > div{
+  display: flex;
+  width:200px;
+  flex-wrap: wrap;
+}
+
 .feat-imgs{
   background-image:url( 'bg-curvy-desktop.svg' );
   background-repeat: no-repeat;
@@ -81,10 +87,6 @@ a{
   justify-self: center;
   align-self: center;
   width:350px;
-}
-
-stayproductive{
-  display: flex;;
 }
 
 footer{

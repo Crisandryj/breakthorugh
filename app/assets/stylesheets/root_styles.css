@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 *{
-  background-color: hsl(218, 27%, 16%);
+  /* background-color: hsl(218, 27%, 16%); */
   color: white;
 }
 
+section{
+  background-color: hsl(218, 27%, 16%);
+}
 nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: 'Raleway';
   color: white;
-  background-color: hsl(218, 28%, 13%);
+  background-color: hsl(218, 27%, 16%);
 }
 
 .title{
@@ -28,6 +31,7 @@ color:white;
 font-size:45px;
 }
 
+
 a{
   text-decoration: none;
   color:white;
@@ -39,14 +43,17 @@ a{
 }
 
 .main-img{
+  
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+
 .feat-imgs{
-  background-image:url( 'bg-curvy-desktop.svg' );
-  background-repeat: no-repeat;
+  /* background-image:url( 'bg-curvy-desktop.svg' );
+  background-repeat: no-repeat; */
+  background-color: #181F2B;
   display:flex;
   flex-direction: columns;
   align-items:center;

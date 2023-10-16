@@ -82,6 +82,7 @@ a{
   justify-content: center;
   align-items: center;
   background-color: #181F2B;
+  margin:30px;
 }
 
 .item > p{

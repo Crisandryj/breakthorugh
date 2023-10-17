@@ -91,9 +91,23 @@ a{
 footer{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
   background-color: #161b25;
   height: 300px;
   margin: 0px;
   padding: 0px;
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 50px;
+}
+
+.location{
+  display: flex;
+  margin: 10px;
+  gap: 10px;
 }
 

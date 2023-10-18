@@ -91,12 +91,39 @@ a{
 footer{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr .5fr;
   align-items: center;
+  grid-template-rows: auto;
   background-color: #161b25;
   height: 300px;
   margin: 0px;
   padding: 0px;
+  grid-template-areas: 
+  "header header header . ."
+  "location contact info general social" ;
+}
+
+.footer-header{
+  grid-area: header;
+}
+
+.item-1{
+  grid-area: location;
+}
+
+.item-2{
+  grid-area: contact;
+}
+
+.item-3{
+  grid-area: info;  
+}
+
+.item-4{
+  grid-area: general; 
+}
+
+.item-5{
+  grid-area: social;
 }
 
 .logo{

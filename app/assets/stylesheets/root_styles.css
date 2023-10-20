@@ -145,4 +145,9 @@ footer{
   gap:10px;
 }
 
+.item-3{
+  position: relative;
+  top: 20px;
+}
+
 

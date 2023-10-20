@@ -145,6 +145,10 @@ footer{
   gap:10px;
 }
 
+.footer-header > h2{
+  font-size: 40px;
+}
+
 .item-3{
   position: relative;
   top: 20px;

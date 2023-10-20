@@ -9,4 +9,17 @@
   body{
     background-color: black;
   }
+  footer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-self: center;
+    height: 600px;
+  }
+  .item-3, .item-4{
+    margin-left: 20px;
+  }
+  .item-5{
+    align-self: center;
+  }
 }

@@ -154,3 +154,11 @@ footer{
 }
 
 
+.btn{
+  font-size: 30px;
+  text-align: center;
+  vertical-align: center;
+  width: 250px;
+  border-radius: 20px;
+  background-color: hsl(198, 60%, 50%)
+}

@@ -1,0 +1,2 @@
+class BudgetTracker < ApplicationRecord
+end

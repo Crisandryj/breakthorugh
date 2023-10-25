@@ -4,5 +4,12 @@
 <%= form_with do |form| %>
   <%= form.label :type, "Type" %>
   <%= form.select :type, [["Income", "Inc"], ["Expenses", "Exp"]] %>
+  <%= form.label :category, "Category" %>
+  <%= form.select :category, [["Utilities", "Utilities"], ["Groceries", "Groceries"]] %>  
+  <%= form.label :amount, "Amount" %>
+  <%= form.number_field :amount %>
+  <%= form.label :description, "Comments" %>
+  <%= form.text_field :description %>
   <%= form.submit "Submit" %>
 <% end %>
+

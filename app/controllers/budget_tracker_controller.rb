@@ -11,7 +11,7 @@ class BudgetTrackerController < ApplicationController
       flash[:notice] = 'Budget sucessfully created'
       redirect_to @budget
     else
-      render :unprocessable_entity
+      render :new, :unprocessable_entity
     end
   end
 

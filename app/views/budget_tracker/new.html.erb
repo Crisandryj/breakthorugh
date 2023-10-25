@@ -2,7 +2,7 @@
 <%= link_to 'Home', '/'%>
 
 <%= form_with do |form| %>
-  <%= form.label :category, "Category" %>
-  <%= form.select :category, [["Income", "Inc"], ["Expenses", "Exp"]] %>
+  <%= form.label :type, "Type" %>
+  <%= form.select :type, [["Income", "Inc"], ["Expenses", "Exp"]] %>
   <%= form.submit "Submit" %>
 <% end %>

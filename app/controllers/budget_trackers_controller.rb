@@ -1,4 +1,4 @@
-class BudgetTrackerController < ApplicationController
+class BudgetTrackersController < ApplicationController
   before_action :authenticate_user!
 
   def new

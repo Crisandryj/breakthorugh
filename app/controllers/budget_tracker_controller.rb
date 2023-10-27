@@ -8,17 +8,18 @@ class BudgetTrackerController < ApplicationController
   def create
     @budget = BudgetTracker.create(budget_params)
     if @budget.save
-      flash[:notice] = 'Budget sucessfully created'
-      redirect_to @budget
+      redirect_to @budget, notice: 'Budget successfully created'
     else
+      puts params.inspect
       render :new, :unprocessable_entity
+      flash[:notice] = 'Unsuccessful'
     end
   end
 
   private
 
   def budget_params
-    params.require(:budget).permit(:expense, :income, :category, :user_id)
+    params.require.permit(:amount, :category, :user_id, :description, :type)
   end
 
 end

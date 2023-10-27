@@ -1,7 +1,8 @@
 <%= stylesheet_link_tag "budget_styles" %>
+
 <%= link_to 'Home', '/'%>
 
-<%= form_with do |form| %>
+<%= form_with model: @budget do |form| %>
   <%= form.label :type, "Type" %>
   <%= form.select :type, [["Income", "Inc"], ["Expenses", "Exp"]] %>
   <%= form.label :category, "Category" %>

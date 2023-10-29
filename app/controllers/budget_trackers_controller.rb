@@ -11,7 +11,7 @@ class BudgetTrackersController < ApplicationController
       redirect_to @budget, notice: 'Budget successfully created'
     else
       puts params.inspect
-      render :new, :unprocessable_entity
+      render :new, status: :unprocessable_entity
       flash[:notice] = 'Unsuccessful'
     end
   end
@@ -19,7 +19,7 @@ class BudgetTrackersController < ApplicationController
   private
 
   def budget_params
-    params.require.permit(:amount, :category, :user_id, :description, :type)
+    params.require(:budget_tracker).permit(:amount, :category, :user_id, :description, :type)
   end
 
 end

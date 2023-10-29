@@ -13,7 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_10_24_193945) do
   create_table "budget_trackers", force: :cascade do |t|
     t.string "category"
-    t.string "type"
+    t.string "group"
     t.text "description"
     t.float "amount"
     t.integer "user_id"

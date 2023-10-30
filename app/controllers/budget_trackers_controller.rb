@@ -10,16 +10,16 @@ class BudgetTrackersController < ApplicationController
     if @budget.save
       redirect_to @budget, notice: 'Budget successfully created'
     else
-      puts params.inspect
+      flash[:notice] = @budget.errors.full_messages
       render :new, status: :unprocessable_entity
-      flash[:notice] = 'Unsuccessful'
+      puts params.inspect
     end
   end
 
   private
 
   def budget_params
-    params.require(:budget_tracker).permit(:amount, :category, :user_id, :description, :type)
+    params.require(:budget_tracker).permit(:amount, :category, :user_id, :description, :group)
   end
 
 end

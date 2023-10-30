@@ -3,8 +3,8 @@
 <%= link_to 'Home', '/'%>
 
 <%= form_with model: @budget do |form| %>
-  <%= form.label :type, "Type" %>
-  <%= form.select :type, [["Income", "Inc"], ["Expenses", "Exp"]] %>
+  <%= form.label :group, "Type" %>
+  <%= form.select :group, [["Income", "Inc"], ["Expenses", "Exp"]] %>
   <%= form.label :category, "Category" %>
   <%= form.select :category, [["Utilities", "Utilities"], ["Groceries", "Groceries"]] %>  
   <%= form.label :amount, "Amount" %>

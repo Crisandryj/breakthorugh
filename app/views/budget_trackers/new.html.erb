@@ -16,12 +16,19 @@
 
 
 <table>
-<th>Type</th>
-<th>Category</th>
-<th>Amount</th>
-<th>Description</th>
-<tr></tr>
-<tr></tr>
-<tr></tr>
-<tr></tr>
+<caption>Income/Expenses</caption>
+<tr>
+  <th>Type</th>
+  <th>Category</th>
+  <th>Amount</th>
+  <th>Description</th>
+</tr>
+<% BudgetTracker.all.each do |item|%>
+<tr>
+  <td><%= item.group%></td>
+  <td><%= item.category%></td>
+  <td><%= item.amount%></td>
+  <td><%= item.description%></td>
+</tr>
+<%end %>
 </table>

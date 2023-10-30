@@ -15,13 +15,15 @@
 <% end %>
 
 
-<table class="table">
+<table class="table table-striped">
 <caption>Income/Expenses</caption>
 <tr>
-  <th>Type</th>
-  <th>Category</th>
-  <th>Amount</th>
-  <th>Description</th>
+<thead>
+  <th scope="col">Type</th>
+  <th scope="col">Category</th>
+  <th scope="col">Amount</th>
+  <th scope="col">Description</th>
+  </thead>
 </tr>
 <% BudgetTracker.all.each do |item|%>
 <tr>

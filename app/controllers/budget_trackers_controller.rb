@@ -10,7 +10,9 @@ class BudgetTrackersController < ApplicationController
     if @budget.save
       redirect_to @budget, notice: 'Budget successfully created'
     else
-      flash[:notice] = @budget.errors.full_messages
+      @budget.errors.full_messages.each do |msg|
+        flash[:notice] = msg
+      end
       render :new, status: :unprocessable_entity
       puts params.inspect
     end

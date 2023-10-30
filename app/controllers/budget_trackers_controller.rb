@@ -6,7 +6,7 @@ class BudgetTrackersController < ApplicationController
   end
 
   def create
-    @budget = BudgetTracker.create(budget_params)
+    @budget = current_user.budget_trackers.create(budget_params)
     if @budget.save
       redirect_to @budget, notice: 'Budget successfully created'
     else

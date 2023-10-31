@@ -14,14 +14,19 @@ class BudgetTrackersController < ApplicationController
         flash[:notice] = msg
       end
       render :new, status: :unprocessable_entity
-      puts params.inspect
     end
+  end
+
+  def destroy
+    @budget = BudgetTracker.find(params[:id])
+    @budget.destroy
   end
 
   private
 
   def budget_params
+    puts params.inspect
     params.require(:budget_tracker).permit(:amount, :category, :user_id, :description, :group)
   end
-
+  
 end

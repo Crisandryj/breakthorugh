@@ -32,8 +32,9 @@
   <td><%= item.category%></td>
   <td><%= item.amount%></td>
   <td><%= item.description%></td>
-  <td><%= link_to "delete",  {:controller => :budget_trackers, :method => :destroy}%></td>
-  <%= puts params.inspect %>
+  <td><%=button_to 'Delete', {:controller => 'budget_trackers', :action => 'destroy', :id => item.id}, :method => 'delete' %> </td>
+  <%= puts @budget.inspect %>
+
    <%= puts "hi"%>
 </tr>
 <%end %>

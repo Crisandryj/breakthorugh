@@ -26,7 +26,9 @@ class BudgetTrackersController < ApplicationController
 
   def budget_params
     puts params.inspect
-    params.require(:budget_tracker).permit(:amount, :category, :user_id, :description, :group)
+    if params[:budget_tracker].present?
+      params.require(:budget_tracker).permit(:amount, :category, :user_id, :description, :group)
+    end
   end
   
 end

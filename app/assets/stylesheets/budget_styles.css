@@ -1,7 +1,12 @@
 #type, #category, #description, #amount{
   color: black;
 }
+select{
+  color: black;
+}
 
 body{
   background-color: hsl(218, 27%, 16%);
+  margin:15px;
+  color: black;
 }

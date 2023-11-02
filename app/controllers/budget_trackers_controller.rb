@@ -8,7 +8,7 @@ class BudgetTrackersController < ApplicationController
   def create
     @budget = current_user.budget_trackers.create(budget_params)
     if @budget.save
-      redirect_to @budget, notice: 'Budget successfully created'
+      redirect_to @budget, notice: 'Successfully created'
     else
       @budget.errors.full_messages.each do |msg|
         flash[:notice] = msg
@@ -20,6 +20,7 @@ class BudgetTrackersController < ApplicationController
   def destroy
     @budget = BudgetTracker.find(params[:id])
     @budget.destroy
+    redirect_to @budget
   end
 
   private

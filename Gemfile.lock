@@ -113,6 +113,8 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     google-protobuf (3.24.4-arm64-darwin)
+    groupdate (6.4.0)
+      activesupport (>= 6.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.1)
@@ -257,6 +259,7 @@ DEPENDENCIES
   dartsass-sprockets
   debug
   devise (~> 4.9)
+  groupdate (~> 6.4)
   importmap-rails
   jbuilder
   puma (~> 5.0)

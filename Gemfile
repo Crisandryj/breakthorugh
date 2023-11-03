@@ -80,3 +80,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "chartkick", "~> 5.0"
+
+gem "groupdate", "~> 6.4"

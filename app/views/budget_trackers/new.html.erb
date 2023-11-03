@@ -32,7 +32,7 @@
   <td><%= item.category%></td>
   <td><%= item.amount%></td>
   <td><%= item.description%></td>
-  <td ><%=button_to 'Delete', {:controller => 'budget_trackers', :action => 'destroy', :id => item.id, class: "btn btn-dark"},:method => 'delete' %> </td>
+  <td ><%=button_to 'Delete', {:controller => 'budget_trackers', :action => 'destroy', :id => item.id, },:method => 'delete',class: "btn btn-dark" %> </td>
   <%= puts @budget.inspect %>
 
    <%= puts "hi"%>

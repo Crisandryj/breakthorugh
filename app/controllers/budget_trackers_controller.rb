@@ -22,9 +22,8 @@ class BudgetTrackersController < ApplicationController
     @budget.destroy
     redirect_to @budget
   end
-  
-  def chart
-    
+
+  def chart 
   end
 
   private
@@ -35,5 +34,4 @@ class BudgetTrackersController < ApplicationController
       params.require(:budget_tracker).permit(:amount, :category, :user_id, :description, :group)
     end
   end
-  
 end

@@ -22,6 +22,10 @@ class BudgetTrackersController < ApplicationController
     @budget.destroy
     redirect_to @budget
   end
+  
+  def chart
+    
+  end
 
   private
 

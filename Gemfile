@@ -2,7 +2,8 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
-
+#byebug
+gem 'byebug', '~> 9.0', '>= 9.0.5'
 #bootstrap
 gem 'bootstrap', '~> 5.3.2'
 

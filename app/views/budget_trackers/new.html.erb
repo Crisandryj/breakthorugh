@@ -15,7 +15,7 @@
 <% end %>
 
 
-<table class="table table-striped table-dark table-hover table-sm">
+<table class="table table-striped thead-light table-hover table-sm">
 <caption>Income/Expenses</caption>
 <tr>
 <thead>
@@ -30,7 +30,7 @@
 <tr>
   <td><%= item.group%></td>
   <td><%= item.category%></td>
-  <td><%= item.amount%></td>
+  <td>$<%= item.amount.round(0) if item.amount >= 0%></td>
   <td><%= item.description%></td>
   <td ><%=button_to 'Delete', {:controller => 'budget_trackers', :action => 'destroy', :id => item.id, },:method => 'delete',class: "btn btn-dark" %> </td>
   <%= puts @budget.inspect %>
@@ -40,6 +40,6 @@
 <% end %>
 </table>
 
-<%= pie_chart BudgetTracker.group(:category).sum(:amount) %>
 
+<%= pie_chart BudgetTracker.group(:category).sum(:amount),width: "1200px", height: "1200px" %>
 

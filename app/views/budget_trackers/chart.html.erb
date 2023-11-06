@@ -1,4 +1,4 @@
 <%= stylesheet_link_tag "budget_styles" %>
-<%= link_to 'Home', '/'%>
-<%= link_to 'Transactions', '/budget_trackers/new'%>
+<%= link_to 'Home', '/',class:"badge badge-secondary"%>
+<%= link_to 'Transactions', '/budget_trackers/new',class:"badge badge-secondary"%>
 <%= pie_chart BudgetTracker.group(:category).sum(:amount),width: "1200px", height: "1200px", prefix: "$"  %>

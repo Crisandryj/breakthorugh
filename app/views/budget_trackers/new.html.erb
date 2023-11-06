@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "budget_styles" %>
 
-<%= link_to 'Home', '/'%>
-<%= link_to 'Chart', '/budget_trackers/chart'%>
+<%= link_to 'Home', '/',class:"badge badge-secondary"%>
+<%= link_to 'Chart', '/budget_trackers/chart',class:"badge badge-secondary"%>
 
 <%= form_with model: @budget do |form| %>
   <%= form.label :group, "Group" %>

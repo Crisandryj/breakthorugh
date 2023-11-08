@@ -15,16 +15,15 @@
   <%= form.submit "Submit" %>
 <% end %>
 
-
 <table class="table table-striped thead-light table-hover table-sm">
 <caption>Income/Expenses</caption>
 <tr>
-<thead>
-  <th scope="col">Type</th>
-  <th scope="col">Category</th>
-  <th scope="col">Amount</th>
-  <th scope="col">Description</th>
-  <th scope="col">Remove</th>
+  <thead>
+    <th scope="col">Type</th>
+    <th scope="col">Category</th>
+    <th scope="col">Amount</th>
+    <th scope="col">Description</th>
+    <th scope="col">Remove</th>
   </thead>
 </tr>
 <% BudgetTracker.all.each do |item|%>

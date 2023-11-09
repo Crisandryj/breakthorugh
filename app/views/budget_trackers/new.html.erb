@@ -5,9 +5,9 @@
 
 <%= form_with model: @budget do |form| %>
   <%= form.label :group, "Group" %>
-  <%= form.select :group, [["Income", "Inc"], ["Expenses", "Exp"]] %>
-  <%= form.label :category, "Category" %>
-  <%= form.select :category, [["Utilities", "Utilities"], ["Groceries", "Groceries"]] %>  
+  <%= form.collection_select :group, Group.all, :name, :name %>
+  <%= form.label :category, "Group" %>
+  <%= form.collection_select :category, Category.where(:group => 13), :name, :name %>
   <%= form.label :amount, "Amount" %>
   <%= form.number_field :amount %>
   <%= form.label :description, "Decription" %>

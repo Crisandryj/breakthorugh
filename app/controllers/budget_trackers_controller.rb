@@ -23,8 +23,7 @@ class BudgetTrackersController < ApplicationController
     redirect_to @budget
   end
 
-  def chart 
-  end
+  def chart; end
 
   private
 

@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Group.destroy_all
+Category.destroy_all
+
+Group.create!([{ name: 'Income' }, { name: 'Expenses' }])
+
+@income = Group.find_by_name('Income')
+@expense = Group.find_by_name('Expenses')
+
+@income.categories.create!([{ name: 'Salary' }, { name: 'Carry Over' }])
+@expense.categories.create!([{ name: 'Utilities' }, { name: 'Groceries' }])
+
+p "Created #{Group.count} groups"
+p "Created #{Category.count} categories"

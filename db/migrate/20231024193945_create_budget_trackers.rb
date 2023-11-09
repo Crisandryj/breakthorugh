@@ -3,7 +3,7 @@ class CreateBudgetTrackers < ActiveRecord::Migration[7.0]
     create_table :budget_trackers do |t|
       t.string :category
       t.string :group
-      t.text :description 
+      t.text :description
       t.float :amount
       t.belongs_to :user
       t.timestamps

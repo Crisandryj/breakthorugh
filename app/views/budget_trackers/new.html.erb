@@ -7,6 +7,13 @@
   <%= form.label :group, "Group" %>
   <%= form.collection_select :group, Group.all, :name, :name %>
   <%= form.label :category, "Group" %>
+  <script>
+  const group = document.getElementById('budget_tracker_group')
+  group.addEventListener("change", (event) => {
+  console.log(`You like ${event.target.value}`);
+  });
+  console.log(group.value)
+  </script>
   <%= form.collection_select :category, Category.where(:group => 13), :name, :name %>
   <%= form.label :amount, "Amount" %>
   <%= form.number_field :amount %>

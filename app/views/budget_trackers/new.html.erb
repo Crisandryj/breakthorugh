@@ -14,7 +14,8 @@
   });
   console.log(group.value)
   </script>
-  <%= form.collection_select :category, Category.where(:group => 13), :name, :name %>
+ 
+  
   <%= form.label :amount, "Amount" %>
   <%= form.number_field :amount %>
   <%= form.label :description, "Decription" %>

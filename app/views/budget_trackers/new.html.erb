@@ -3,14 +3,14 @@
 <%= link_to 'Home', '/',class:"badge badge-secondary"%>
 <%= link_to 'Chart', '/budget_trackers/chart',class:"badge badge-secondary"%>
 
-<%= form_with model: @budget do |form| %>
+<%= form_with model: @budget, html: {class: "budget_form"} do |form| %>
   <%= form.label :group, "Group" %>
   <%= form.collection_select :group, Group.all, :name, :name %>
   <%= form.label :category, "Group" %>
   <script>
   const label = document.createElement('label')
-  const form = document.querySelector('form');
-  console.log(form)
+  const form = document.querySelector('.budget_form');
+  form.append(label)
   const group = document.getElementById('budget_tracker_group')
   group.addEventListener("change", (event) => {
     form.append(label)

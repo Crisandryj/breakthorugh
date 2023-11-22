@@ -8,8 +8,12 @@
   <%= form.collection_select :group, Group.all, :name, :name %>
   <%= form.label :category, "Group" %>
   <script>
+  const label = document.createElement('label')
+  const form = document.querySelector('form');
+  console.log(form)
   const group = document.getElementById('budget_tracker_group')
   group.addEventListener("change", (event) => {
+    form.append(label)
   console.log(`You like ${event.target.value}`);
   });
   </script>

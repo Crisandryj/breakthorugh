@@ -9,33 +9,33 @@
   <%# <%= form.label :category, "Category" %> 
   <script>
   //Create category label
-  const label = document.createElement('label')
-  label.setAttribute('for', 'category')
-  label.textContent = "Category"
-  //Selection elements
-  const expensesSelect = document.createElement('select')
-  expensesSelect.setAttribute('id','category')
-  expensesSelect.setAttribute('name','category')
-  const incomeSelect = document.createElement('select')
-  //Expenses group options
-  const option1 = document.createElement('option')
-  const option2 = document.createElement('option')
-  option1.setAttribute('value',"Groceries")
-  option2.setAttribute('value',"Utilities")
-  option1.textContent = "Groceries"
-  option2.textContent = "Utilities"
-  //Insert expense options in list
-  expensesSelect.append(option1)
-  expensesSelect.append(option2)
-  const form = document.querySelector('.budget_form');
-  form.append(label)
-  const group = document.getElementById('budget_tracker_group')
-  //Add corresponding select to category
-  group.addEventListener("change", (event) => {
+    const label = document.createElement('label')
+    label.setAttribute('for', 'category_name')
+    label.textContent = "Category"
+    //Selection elements
+    const expensesSelect = document.createElement('select')
+    expensesSelect.setAttribute('id','budget_tracker_category')
+    expensesSelect.setAttribute('name','budget_tracker[category]')
+    const incomeSelect = document.createElement('select')
+    //Expenses group options
+    const option1 = document.createElement('option')
+    const option2 = document.createElement('option')
+    option1.setAttribute('value',"Groceries")
+    option2.setAttribute('value',"Utilities")
+    option1.textContent = "Groceries"
+    option2.textContent = "Utilities"
+    //Insert expense options in list
+    expensesSelect.append(option1)
+    expensesSelect.append(option2)
+    const form = document.querySelector('.budget_form');
     form.append(label)
-    form.append(expensesSelect)
-  console.log(`You like ${event.target.value}`);
-  });
+    const group = document.getElementById('budget_tracker_group')
+    //Add corresponding select to category
+    group.addEventListener("change", (event) => {
+      form.append(label)
+      form.append(expensesSelect)
+    console.log(`You like ${event.target.value}`);
+    });
   </script>
  
   <%= form.label :amount, "Amount" %>

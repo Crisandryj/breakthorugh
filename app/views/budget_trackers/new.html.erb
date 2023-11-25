@@ -6,9 +6,10 @@
 <%= form_with model: @budget, html: {class: "budget_form"} do |form| %>
   <%= form.label :group, "Group" %>
   <%= form.collection_select :group, Group.all, :name, :name %>
-  <%= form.label :category, "Group" %>
+  <%= form.label :category, "Category" %>
   <script>
   const label = document.createElement('label')
+  label.setAttribute('for', 'category')
   const form = document.querySelector('.budget_form');
   form.append(label)
   const group = document.getElementById('budget_tracker_group')

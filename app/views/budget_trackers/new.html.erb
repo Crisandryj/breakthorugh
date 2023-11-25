@@ -9,12 +9,15 @@
   <%# <%= form.label :category, "Category" %> 
   <script>
   const label = document.createElement('label')
+  const input = document.createElement('input')
   label.setAttribute('for', 'category')
+  label.textContent = "Category"
   const form = document.querySelector('.budget_form');
   form.append(label)
   const group = document.getElementById('budget_tracker_group')
   group.addEventListener("change", (event) => {
     form.append(label)
+    form.append(input)
   console.log(`You like ${event.target.value}`);
   });
   </script>

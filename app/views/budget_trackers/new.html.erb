@@ -9,8 +9,16 @@
   <%# <%= form.label :category, "Category" %> 
   <script>
   const label = document.createElement('label')
-  const expensesInput = document.createElement('input')
-  const incomeInput = document.createElement('input')
+  const expensesSelect = document.createElement('select')
+  const incomeSelect = document.createElement('select')
+  const option1 = document.createElement('option')
+  const option2 = document.createElement('option')
+  option1.textContent = "Groceries"
+  option2.textContent = "Utilities"
+  expensesSelect.append(option1)
+  expensesSelect.append(option2)
+  expensesSelect.setAttribute('id','category')
+  expensesSelect.setAttribute('name','category')
   label.setAttribute('for', 'category')
   label.textContent = "Category"
   const form = document.querySelector('.budget_form');
@@ -18,7 +26,7 @@
   const group = document.getElementById('budget_tracker_group')
   group.addEventListener("change", (event) => {
     form.append(label)
-    form.append(input)
+    form.append(expensesSelect)
   console.log(`You like ${event.target.value}`);
   });
   </script>

@@ -7,6 +7,7 @@
   <%= form.label :group, "Group" %>
   <%= form.collection_select :group, Group.all, :name, :name %>
   <script>
+      //EXPENSES
       //Create category label
       const label = document.createElement('label')
       label.setAttribute('for', 'category_name')
@@ -18,7 +19,6 @@
       const expensesSelect = document.createElement('select')
       expensesSelect.setAttribute('id','budget_tracker_category')
       expensesSelect.setAttribute('name','budget_tracker[category]')
-      const incomeSelect = document.createElement('select')
       //Expenses group options
       const option1 = document.createElement('option')
       const option2 = document.createElement('option')
@@ -29,11 +29,35 @@
       //Insert expense options in list
       expensesSelect.append(option1)
       expensesSelect.append(option2)
+      //INCOME
+      //Create category label
+      const incomeLabel = document.createElement('label')
+      incomeLabel.setAttribute('for', 'category_name')
+      incomeLabel.textContent = "Category"
+      //Selection elements
+      const incomeSelect = document.createElement('select')
+      incomeSelect.setAttribute('id','budget_tracker_category')
+      incomeSelect.setAttribute('name','budget_tracker[category]')
+      //Expenses group options
+      const incomeOption1 = document.createElement('option')
+      const incomeOption2 = document.createElement('option')
+      incomeOption1.setAttribute('value',"Salary")
+      incomeOption2.setAttribute('value',"Carry-Over")
+      incomeOption1.textContent = "Salary"
+      incomeOption2.textContent = "Carry-Over"
+      //Insert expense options in list
+      incomeSelect.append(incomeOption1)
+      incomeSelect.append(incomeOption2)
     //Add corresponding select to category
     group.addEventListener("change", (event) => {
+      if (event.target.value == "Expenses"){
       // Add label to form
       form.append(label)
-      form.append(expensesSelect)
+      form.append(expensesSelect)}
+      else{
+      form.append(incomeLabel)
+      form.append(incomeSelect)}
+      
     console.log(`You like ${event.target.value}`);
     });
 

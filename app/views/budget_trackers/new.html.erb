@@ -7,14 +7,13 @@
   <%= form.label :group, "Group" %>
   <%= form.collection_select :group, Group.all, :name, :name %>
   <script>
-    //select group for listener
-     const group = document.getElementById('budget_tracker_group')
-    //Add corresponding select to category
-    group.addEventListener("change", (event) => {
       //Create category label
       const label = document.createElement('label')
       label.setAttribute('for', 'category_name')
       label.textContent = "Category"
+      //select group for listener and form
+      const group = document.getElementById('budget_tracker_group')
+      const form = document.querySelector('.budget_form');
       //Selection elements
       const expensesSelect = document.createElement('select')
       expensesSelect.setAttribute('id','budget_tracker_category')
@@ -30,13 +29,14 @@
       //Insert expense options in list
       expensesSelect.append(option1)
       expensesSelect.append(option2)
-      const form = document.querySelector('.budget_form');
-      form.append(label)
+    //Add corresponding select to category
+    group.addEventListener("change", (event) => {
       // Add label to form
       form.append(label)
       form.append(expensesSelect)
     console.log(`You like ${event.target.value}`);
     });
+
   </script>
  
   <%= form.label :amount, "Amount" %>

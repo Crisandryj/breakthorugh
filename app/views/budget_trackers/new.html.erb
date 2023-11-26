@@ -6,7 +6,6 @@
 <%= form_with model: @budget, html: {class: "budget_form"} do |form| %>
   <%= form.label :group, "Group" %>
   <%= form.collection_select :group, Group.all, :name, :name %>
-  <%# <%= form.label :category, "Category" %> 
   <script>
   //Create category label
     const label = document.createElement('label')

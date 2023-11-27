@@ -57,10 +57,10 @@
       form.removeChild(incomeLabel)
       form.removeChild(incomeSelect)}
       else{
-      form.removeChild(label)
-      form.removeChild(expensesSelect)
       form.insertBefore(incomeLabel,form.children[4])
-      form.insertBefore(incomeSelect,form.children[5])}  
+      form.insertBefore(incomeSelect,form.children[5])
+      form.removeChild(label)
+      form.removeChild(expensesSelect)}  
     });
   </script>
  

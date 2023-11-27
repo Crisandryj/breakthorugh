@@ -6,10 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+#rails db:seed
 Group.destroy_all
 Category.destroy_all
 
-Group.create!([{ name: 'Income' }, { name: 'Expenses' }])
+Group.create!([{ name: '' }, { name: 'Income' }, { name: 'Expenses' }])
 
 @income = Group.find_by_name('Income')
 @expense = Group.find_by_name('Expenses')

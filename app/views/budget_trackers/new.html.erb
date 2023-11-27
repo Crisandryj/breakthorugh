@@ -53,11 +53,14 @@
       if (event.target.value == "Expenses"){
       // Add label to form
       form.append(label)
-      form.append(expensesSelect)}
+      form.append(expensesSelect)
+      form.removeChild(incomeLabel)
+      form.removeChild(incomeSelect)}
       else{
+      form.removeChild(label)
+      form.removeChild(expensesSelect)
       form.append(incomeLabel)
-      form.append(incomeSelect)}
-      
+      form.append(incomeSelect)}  
     });
   </script>
  

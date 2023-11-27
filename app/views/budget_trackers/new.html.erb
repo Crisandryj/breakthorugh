@@ -9,19 +9,19 @@
   <script>
       //EXPENSES
       //Create category label
-      const label = document.createElement('label')
+      var label = document.createElement('label')
       label.setAttribute('for', 'category_name')
       label.textContent = "Category"
       //select group for listener and form
-      const group = document.getElementById('budget_tracker_group')
-      const form = document.querySelector('.budget_form');
+      var group = document.getElementById('budget_tracker_group')
+      var form = document.querySelector('.budget_form');
       //Selection elements
-      const expensesSelect = document.createElement('select')
+      var expensesSelect = document.createElement('select')
       expensesSelect.setAttribute('id','budget_tracker_category')
       expensesSelect.setAttribute('name','budget_tracker[category]')
       //Expenses group options
-      const option1 = document.createElement('option')
-      const option2 = document.createElement('option')
+      var option1 = document.createElement('option')
+      var option2 = document.createElement('option')
       option1.setAttribute('value',"Groceries")
       option2.setAttribute('value',"Utilities")
       option1.textContent = "Groceries"
@@ -31,16 +31,16 @@
       expensesSelect.append(option2)
       //INCOME
       //Create category label
-      const incomeLabel = document.createElement('label')
+      var incomeLabel = document.createElement('label')
       incomeLabel.setAttribute('for', 'category_name')
       incomeLabel.textContent = "Category"
       //Selection elements
-      const incomeSelect = document.createElement('select')
+      var incomeSelect = document.createElement('select')
       incomeSelect.setAttribute('id','budget_tracker_category')
       incomeSelect.setAttribute('name','budget_tracker[category]')
       //Expenses group options
-      const incomeOption1 = document.createElement('option')
-      const incomeOption2 = document.createElement('option')
+      var incomeOption1 = document.createElement('option')
+      var incomeOption2 = document.createElement('option')
       incomeOption1.setAttribute('value',"Salary")
       incomeOption2.setAttribute('value',"Carry-Over")
       incomeOption1.textContent = "Salary"
@@ -88,7 +88,7 @@
   <td><%= item.category%></td>
   <td>$<%= item.amount.round(0) if item.amount >= 0%></td>
   <td><%= item.description%></td>
-  <td ><%=button_to 'Delete', {:controller => 'budget_trackers', :action => 'destroy', :id => item.id, },:method => 'delete',class: "btn btn-dark" %> </td>
+  <td ><%=button_to 'Devare', {:controller => 'budget_trackers', :action => 'destroy', :id => item.id, },:method => 'devare',class: "btn btn-dark" %> </td>
 </tr>
 <% end %>
 </table>

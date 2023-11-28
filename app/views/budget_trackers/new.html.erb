@@ -1,3 +1,5 @@
+<%= javascript_import_module_tag "category" %>
+
 <%= stylesheet_link_tag "budget_styles" %>
 
 <%= link_to 'Home', '/',class:"badge badge-secondary"%>
@@ -6,64 +8,7 @@
 <%= form_with model: @budget, html: {class: "budget_form"} do |form| %>
   <%= form.label :group, "Group" %>
   <%= form.collection_select :group, Group.all, :name, :name %>
-  <script>
-      //EXPENSES
-      //Create category label
-      var label = document.createElement('label')
-      label.setAttribute('for', 'category_name')
-      label.textContent = "Category"
-      //select group for listener and form
-      var group = document.getElementById('budget_tracker_group')
-      var form = document.querySelector('.budget_form');
-      //Selection elements
-      var expensesSelect = document.createElement('select')
-      expensesSelect.setAttribute('id','budget_tracker_category')
-      expensesSelect.setAttribute('name','budget_tracker[category]')
-      //Expenses group options
-      var option1 = document.createElement('option')
-      var option2 = document.createElement('option')
-      option1.setAttribute('value',"Groceries")
-      option2.setAttribute('value',"Utilities")
-      option1.textContent = "Groceries"
-      option2.textContent = "Utilities"
-      //Insert expense options in list
-      expensesSelect.append(option1)
-      expensesSelect.append(option2)
-      //INCOME
-      //Create category label
-      var incomeLabel = document.createElement('label')
-      incomeLabel.setAttribute('for', 'category_name')
-      incomeLabel.textContent = "Category"
-      //Selection elements
-      var incomeSelect = document.createElement('select')
-      incomeSelect.setAttribute('id','budget_tracker_category')
-      incomeSelect.setAttribute('name','budget_tracker[category]')
-      //Expenses group options
-      var incomeOption1 = document.createElement('option')
-      var incomeOption2 = document.createElement('option')
-      incomeOption1.setAttribute('value',"Salary")
-      incomeOption2.setAttribute('value',"Carry-Over")
-      incomeOption1.textContent = "Salary"
-      incomeOption2.textContent = "Carry-Over"
-      //Insert expense options in list
-      incomeSelect.append(incomeOption1)
-      incomeSelect.append(incomeOption2)
-    //Add corresponding select to category
-    group.addEventListener("change", (event) => {
-      if (event.target.value == "Expenses"){
-      // Add label to form
-      form.insertBefore(label,form.children[4])
-      form.insertBefore(expensesSelect,form.children[5])
-      form.removeChild(incomeLabel)
-      form.removeChild(incomeSelect)}
-      else{
-      form.insertBefore(incomeLabel,form.children[4])
-      form.insertBefore(incomeSelect,form.children[5])
-      form.removeChild(label)
-      form.removeChild(expensesSelect)}  
-    });
-  </script>
- 
+
   <%= form.label :amount, "Amount" %>
   <%= form.number_field :amount %>
   <%= form.label :description, "Decription" %>
@@ -88,7 +33,7 @@
   <td><%= item.category%></td>
   <td>$<%= item.amount.round(0) if item.amount >= 0%></td>
   <td><%= item.description%></td>
-  <td ><%=button_to 'Delete', {:controller => 'budget_trackers', :action => 'destroy', :id => item.id, },:method => 'devare',class: "btn btn-dark" %> </td>
+  <td ><%=button_to 'Delete', {:controller => 'budget_trackers', :action => 'destroy', :id => item.id, },:method => 'delete',class: "btn btn-dark" %> </td>
 </tr>
 <% end %>
 </table>

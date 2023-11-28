@@ -46,17 +46,17 @@ function createCategory() {
   group.addEventListener("change", (event) => {
     if (event.target.value == "Expenses") {
       // Add label to form
-      form.insertBefore(label, form.children[4]);
-      form.insertBefore(expensesSelect, form.children[5]);
+      form.insertBefore(label, form.children[3]);
+      form.insertBefore(expensesSelect, form.children[4]);
       form.removeChild(incomeLabel);
       form.removeChild(incomeSelect);
     } else {
-      form.insertBefore(incomeLabel, form.children[4]);
-      form.insertBefore(incomeSelect, form.children[5]);
+      form.insertBefore(incomeLabel, form.children[3]);
+      form.insertBefore(incomeSelect, form.children[4]);
       form.removeChild(label);
       form.removeChild(expensesSelect);
     }
   });
 }
 
-// // createCategory();
+createCategory();

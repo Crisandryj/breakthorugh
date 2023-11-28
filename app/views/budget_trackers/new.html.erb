@@ -8,7 +8,6 @@
 <%= form_with model: @budget, html: {class: "budget_form"} do |form| %>
   <%= form.label :group, "Group" %>
   <%= form.collection_select :group, Group.all, :name, :name %>
-
   <%= form.label :amount, "Amount" %>
   <%= form.number_field :amount %>
   <%= form.label :description, "Decription" %>

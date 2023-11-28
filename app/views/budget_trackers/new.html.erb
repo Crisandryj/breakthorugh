@@ -88,7 +88,7 @@
   <td><%= item.category%></td>
   <td>$<%= item.amount.round(0) if item.amount >= 0%></td>
   <td><%= item.description%></td>
-  <td ><%=button_to 'Devare', {:controller => 'budget_trackers', :action => 'destroy', :id => item.id, },:method => 'devare',class: "btn btn-dark" %> </td>
+  <td ><%=button_to 'Delete', {:controller => 'budget_trackers', :action => 'destroy', :id => item.id, },:method => 'devare',class: "btn btn-dark" %> </td>
 </tr>
 <% end %>
 </table>

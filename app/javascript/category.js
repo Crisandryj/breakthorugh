@@ -2,7 +2,7 @@ function createCategory() {
   //EXPENSES
   //Create category label
   let expensesLabel = document.createElement("label");
-  setLabelAttributes(expensesLabel, "for", "category_name", "Category");
+  setElementAttributes(expensesLabel, "for", "category_name", "Category");
   //select group for listener and form
   let group = document.getElementById("budget_tracker_group");
   let form = document.querySelector(".budget_form");
@@ -10,6 +10,7 @@ function createCategory() {
   let expensesSelect = document.createElement("select");
   expensesSelect.setAttribute("id", "budget_tracker_category");
   expensesSelect.setAttribute("name", "budget_tracker[category]");
+
   //Expenses group options
   let option1 = document.createElement("option");
   let option2 = document.createElement("option");
@@ -23,7 +24,7 @@ function createCategory() {
   //INCOME
   //Create category label
   let incomeLabel = document.createElement("label");
-  setLabelAttributes(incomeLabel, "for", "category_name", "Category");
+  setElementAttributes(incomeLabel, "for", "category_name", "Category");
   //Selection elements
   let incomeSelect = document.createElement("select");
   incomeSelect.setAttribute("id", "budget_tracker_category");
@@ -55,9 +56,9 @@ function createCategory() {
   });
 }
 
-function setLabelAttributes(labelName, attribute, attName, content) {
-  labelName.setAttribute(attribute, attName);
-  labelName.textContent = content;
+function setElementAttributes(name, attribute, attName, content) {
+  name.setAttribute(attribute, attName);
+  name.textContent = content;
 }
 //run function
 createCategory();

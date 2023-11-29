@@ -4,16 +4,16 @@ function createCategory() {
   let form = document.querySelector(".budget_form");
   //Create category label
   let expensesLabel = document.createElement("label");
-  setElementAttributes(expensesLabel, "for", "category_name", "Category");
   let incomeLabel = document.createElement("label");
+  setElementAttributes(expensesLabel, "for", "category_name", "Category");
   setElementAttributes(incomeLabel, "for", "category_name", "Category");
   //Selection elements
   let expensesSelect = document.createElement("select");
+  let incomeSelect = document.createElement("select");
   setElementAttributes(expensesSelect, "id", "budget_tracker_category");
   setElementAttributes(expensesSelect, "name", "budget_tracker[category]");
-  let incomeSelect = document.createElement("select");
-  incomeSelect.setAttribute("id", "budget_tracker_category");
-  incomeSelect.setAttribute("name", "budget_tracker[category]");
+  setElementAttributes(incomeSelect, "id", "budget_tracker_category");
+  setElementAttributes(incomeSelect, "name", "budget_tracker[category]");
   //Expenses group options
   let option1 = document.createElement("option");
   let option2 = document.createElement("option");
@@ -31,25 +31,37 @@ function createCategory() {
   incomeSelect.append(incomeOption1);
   incomeSelect.append(incomeOption2);
 
-  group.addEventListener("change", (event) => {
-    if (event.target.value == "Expenses") {
-      // Add label to form
-      form.insertBefore(expensesLabel, form.children[3]);
-      form.insertBefore(expensesSelect, form.children[4]);
-      form.removeChild(incomeLabel);
-      form.removeChild(incomeSelect);
-    } else {
-      form.insertBefore(incomeLabel, form.children[3]);
-      form.insertBefore(incomeSelect, form.children[4]);
-      form.removeChild(expensesLabel);
-      form.removeChild(expensesSelect);
-    }
-  });
+  insertCategoryToForm(
+    group,
+    form,
+    expensesLabel,
+    incomeLabel,
+    expensesSelect,
+    incomeSelect
+  );
 }
 
 function setElementAttributes(name, attribute, attName, content) {
   name.setAttribute(attribute, attName);
   name.textContent = content;
 }
+
+function insertCategoryToForm(group, form, label1, label2, select1, select2) {
+  group.addEventListener("change", (event) => {
+    if (event.target.value == "Expenses") {
+      // Add label to form
+      form.insertBefore(label1, form.children[3]);
+      form.insertBefore(select1, form.children[4]);
+      form.removeChild(label2);
+      form.removeChild(select2);
+    } else {
+      form.insertBefore(label2, form.children[3]);
+      form.insertBefore(select2, form.children[4]);
+      form.removeChild(label1);
+      form.removeChild(expensesSelect);
+    }
+  });
+}
+
 //run function
 createCategory();

@@ -23,8 +23,7 @@ function createCategory() {
   //INCOME
   //Create category label
   let incomeLabel = document.createElement("label");
-  incomeLabel.setAttribute("for", "category_name");
-  incomeLabel.textContent = "Category";
+  setLabelAttributes(incomeLabel, "for", "category_name", "Category");
   //Selection elements
   let incomeSelect = document.createElement("select");
   incomeSelect.setAttribute("id", "budget_tracker_category");
@@ -60,4 +59,5 @@ function setLabelAttributes(labelName, attribute, attName, content) {
   labelName.setAttribute(attribute, attName);
   labelName.textContent = content;
 }
+//run function
 createCategory();

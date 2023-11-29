@@ -1,11 +1,8 @@
-console.log("hello");
-
 function createCategory() {
   //EXPENSES
   //Create category label
-  let label = document.createElement("label");
-  label.setAttribute("for", "category_name");
-  label.textContent = "Category";
+  let expensesLabel = document.createElement("label");
+  setLabelAttributes(expensesLabel, "for", "category_name", "Category");
   //select group for listener and form
   let group = document.getElementById("budget_tracker_group");
   let form = document.querySelector(".budget_form");
@@ -46,17 +43,21 @@ function createCategory() {
   group.addEventListener("change", (event) => {
     if (event.target.value == "Expenses") {
       // Add label to form
-      form.insertBefore(label, form.children[3]);
+      form.insertBefore(expensesLabel, form.children[3]);
       form.insertBefore(expensesSelect, form.children[4]);
       form.removeChild(incomeLabel);
       form.removeChild(incomeSelect);
     } else {
       form.insertBefore(incomeLabel, form.children[3]);
       form.insertBefore(incomeSelect, form.children[4]);
-      form.removeChild(label);
+      form.removeChild(expensesLabel);
       form.removeChild(expensesSelect);
     }
   });
 }
 
+function setLabelAttributes(labelName, attribute, attName, content) {
+  labelName.setAttribute(attribute, attName);
+  labelName.textContent = content;
+}
 createCategory();

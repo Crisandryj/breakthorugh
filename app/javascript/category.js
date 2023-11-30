@@ -1,27 +1,31 @@
+//Create category label
+let expensesLabel = document.createElement("label");
+let incomeLabel = document.createElement("label");
+//select group for listener and form
+let group = document.getElementById("budget_tracker_group");
+let form = document.querySelector(".budget_form");
+//Selection elements
+let expensesSelect = document.createElement("select");
+let incomeSelect = document.createElement("select");
+//Expenses group options
+let option1 = document.createElement("option");
+let option2 = document.createElement("option");
+//Income group options
+let incomeOption1 = document.createElement("option");
+let incomeOption2 = document.createElement("option");
+
 function createCategory() {
-  //select group for listener and form
-  let group = document.getElementById("budget_tracker_group");
-  let form = document.querySelector(".budget_form");
-  //Create category label
-  let expensesLabel = document.createElement("label");
-  let incomeLabel = document.createElement("label");
   setElementAttributes(expensesLabel, "for", "category_name", "Category");
   setElementAttributes(incomeLabel, "for", "category_name", "Category");
-  //Selection elements
-  let expensesSelect = document.createElement("select");
-  let incomeSelect = document.createElement("select");
+
   setElementAttributes(expensesSelect, "id", "budget_tracker_category");
   setElementAttributes(expensesSelect, "name", "budget_tracker[category]");
   setElementAttributes(incomeSelect, "id", "budget_tracker_category");
   setElementAttributes(incomeSelect, "name", "budget_tracker[category]");
-  //Expenses group options
-  let option1 = document.createElement("option");
-  let option2 = document.createElement("option");
+
   setElementAttributes(option1, "value", "Groceries", "Groceries");
   setElementAttributes(option2, "value", "Utilities", "Utilities");
-  //Income group options
-  let incomeOption1 = document.createElement("option");
-  let incomeOption2 = document.createElement("option");
+
   setElementAttributes(incomeOption1, "value", "Salary", "Salary");
   setElementAttributes(incomeOption2, "value", "Carry-Over", "Carry-Over");
   //Insert expense options in list

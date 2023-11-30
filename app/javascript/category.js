@@ -8,30 +8,30 @@ let form = document.querySelector(".budget_form");
 let expensesSelect = document.createElement("select");
 let incomeSelect = document.createElement("select");
 //Expenses group options
-let option1 = document.createElement("option");
-let option2 = document.createElement("option");
+let expenseOption1 = document.createElement("option");
+let expenseOption2 = document.createElement("option");
 //Income group options
 let incomeOption1 = document.createElement("option");
 let incomeOption2 = document.createElement("option");
 
 function createCategory() {
+  //label
   setElementAttributes(expensesLabel, "for", "category_name", "Category");
   setElementAttributes(incomeLabel, "for", "category_name", "Category");
-
+  //selections
   setElementAttributes(expensesSelect, "id", "budget_tracker_category");
   setElementAttributes(expensesSelect, "name", "budget_tracker[category]");
   setElementAttributes(incomeSelect, "id", "budget_tracker_category");
   setElementAttributes(incomeSelect, "name", "budget_tracker[category]");
-
-  setElementAttributes(option1, "value", "Groceries", "Groceries");
-  setElementAttributes(option2, "value", "Utilities", "Utilities");
-
+  //options
+  setElementAttributes(expenseOption1, "value", "Groceries", "Groceries");
+  setElementAttributes(expenseOption2, "value", "Utilities", "Utilities");
   setElementAttributes(incomeOption1, "value", "Salary", "Salary");
   setElementAttributes(incomeOption2, "value", "Carry-Over", "Carry-Over");
   //Insert expense options in list
-  expensesSelect.append(option1);
-  expensesSelect.append(option2);
-  //Insert expense options in list
+  expensesSelect.append(expenseOption1);
+  expensesSelect.append(expenseOption2);
+  //Insert income options in list
   incomeSelect.append(incomeOption1);
   incomeSelect.append(incomeOption2);
 

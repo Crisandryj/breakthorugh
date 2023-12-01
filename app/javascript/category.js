@@ -68,4 +68,4 @@ function insertCategoryToForm(group, form, label1, label2, select1, select2) {
 }
 
 //call function
-// createCategory();
+createCategory();

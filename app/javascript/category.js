@@ -67,5 +67,5 @@ function insertCategoryToForm(group, form, label1, label2, select1, select2) {
   });
 }
 
-//run function
+//call function
 createCategory();
